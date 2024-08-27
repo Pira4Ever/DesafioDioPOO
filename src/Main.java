@@ -54,5 +54,11 @@ public class Main {
         System.out.println("Conteúdos Concluidos João: " + devJoao.getConteudosConcluidos());
         System.out.println("XP: " + devJoao.calcularTotalXp());
 
+        bootcamp.listarDevsPorNome();
+        bootcamp.listarDevsPorXp();
+
+        System.out.printf("Porcentagem concluída do bootcamp '%s' do(a) dev '%s' %.2f%%\n", bootcamp.getNome(), devCamila.getNome(), devCamila.porcentagemConcluidaBootcamp(bootcamp));
+        System.out.printf("Porcentagem concluída do bootcamp '%s' do(a) dev '%s' %.2f%%\n", bootcamp.getNome(), devJoao.getNome(), devJoao.porcentagemConcluidaBootcamp(bootcamp));
+
     }
 }

@@ -66,4 +66,14 @@ public class Bootcamp {
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
+
+    public void listarDevsPorNome() {
+        Set<Dev> devsPorNome = new LinkedHashSet<>(devsInscritos);
+        devsPorNome.stream().sorted().forEach(System.out::println);
+    }
+
+    public void listarDevsPorXp() {
+        Set<Dev> devsPorXp = new LinkedHashSet<>(devsInscritos);
+        devsPorXp.stream().sorted(new CompararPorXp()).forEach(System.out::println);
+    }
 }
